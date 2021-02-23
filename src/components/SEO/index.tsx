@@ -6,11 +6,10 @@ interface SEOProps {
 }
 
 export default function SEO({ title, isIndex }: SEOProps) {
-    const pageTitle = isIndex ? title : `${title} | MoveIt`;
 
     return (
         <Head>
-            <title>{pageTitle}</title>
+            <title>{title}</title>
 
             <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
             <meta name="MobileOptimized" content="320" />
