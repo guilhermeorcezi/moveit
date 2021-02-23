@@ -1,8 +1,9 @@
 import SEO from '../SEO';
-import {Container, TimeGroup, TimeSeparator} from './styles';
+import {Container, TimeGroup, TimeSeparator, CountdownButton} from './styles';
 
 export default function Countdown(){
   return(
+    <>
     <Container>
       <SEO title="Início | MoveIt" isIndex />
       <TimeGroup>
@@ -17,5 +18,8 @@ export default function Countdown(){
         <span>0</span>
       </TimeGroup>
     </Container>
+
+    <CountdownButton type="button">Iniciar um ciclo</CountdownButton>
+    </>
   )
 }
