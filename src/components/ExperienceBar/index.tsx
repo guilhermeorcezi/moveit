@@ -7,7 +7,7 @@ const ExperienceBar: React.FC = () => {
     <Container>
     <Content>
       <span>0 xp</span>
-      <div>
+      <div className="progress-div">
       <ProgressBar/>
       <CurrentExperience>300xp</CurrentExperience>
       </div>
