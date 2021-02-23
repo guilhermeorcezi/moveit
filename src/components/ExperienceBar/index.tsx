@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { Container, Content, ProgressBar, CurrentExperience } from './styles';
+import { Content, ProgressBar, CurrentExperience } from './styles';
 
 const ExperienceBar: React.FC = () => {
   return (
-    <Container>
     <Content>
       <span>0 xp</span>
       <div className="progress-div">
@@ -13,7 +12,6 @@ const ExperienceBar: React.FC = () => {
       </div>
       <span>600 xp</span>
     </Content>
-    </Container>
   )
 }
 
