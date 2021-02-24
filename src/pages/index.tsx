@@ -1,5 +1,6 @@
 import ExperienceBar from '../components/ExperienceBar'
 import CompletedChallenges from '../components/CompletedChallenges'
+import ChallengeBox from '../components/ChallengeBox'
 import { Profile } from '../components/Profile'
 import {Container, Section, ItemContainer} from '../styles/pages/Index'
 import Countdown from '../components/Countdown'
@@ -16,7 +17,9 @@ export default function Home() {
         <Countdown/>
       </ItemContainer>
 
-      <ItemContainer></ItemContainer>
+      <ItemContainer>
+        <ChallengeBox/>
+      </ItemContainer>
     </Section>
     </Container>
   )
