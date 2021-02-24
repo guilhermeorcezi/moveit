@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+interface CurrentExperienceProps{
+  level: number;
+}
+interface ProgressBarProps{
+  level: number;
+}
+
 export const Content = styled.div`
   display:flex;
   align-items:center;
@@ -18,15 +25,15 @@ span{
 }
 `;
 
-export const ProgressBar = styled.div`
+export const ProgressBar = styled.div<ProgressBarProps>`
 height:4px;
 border-radius:4px;
 background: var(--green);
-width:50%;
+width:${props => `${props.level}%`};
 `;
 
-export const CurrentExperience = styled.span`
-left:50%;
+export const CurrentExperience = styled.span<CurrentExperienceProps>`
+left:${props => `${props.level}%`};
 position:absolute;
 top:12px;
 transform:translateX(-50%);

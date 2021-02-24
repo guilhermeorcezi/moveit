@@ -1,4 +1,5 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useContext } from 'react';
+import { ChallengesContext } from '../../contexts/ChallengesContext'
 import SEO from '../SEO';
 import {
   Container,
@@ -10,7 +11,9 @@ import {
 let countdownTimeout: NodeJS.Timeout;
 
 export default function Countdown(){
-  const [time, setTime] = useState(25 * 60);
+  const { startNewChallenge } = useContext(ChallengesContext);
+
+  const [time, setTime] = useState(0.1 * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
@@ -27,7 +30,7 @@ export default function Countdown(){
   const resetCountdown = useCallback(() => {
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(25 * 60);
+    setTime(0.1 * 60);
   },[]);
 
   useEffect(() => {
@@ -38,6 +41,7 @@ export default function Countdown(){
     } else if (isActive && time === 0){
       setHasFinished(true);
       setIsActive(false);
+      startNewChallenge();
     }
   }, [isActive, time])
 
@@ -69,7 +73,7 @@ export default function Countdown(){
         {isActive ? (
           <CountdownButton
           type="button"
-          onClick={startCountdown}
+          onClick={resetCountdown}
           isActive={isActive}
           >
             Abandonar ciclo
@@ -77,8 +81,8 @@ export default function Countdown(){
         ) : (
           <CountdownButton
           type="button"
-          onClick={resetCountdown}>
-            Adicionar um ciclo
+          onClick={startCountdown}>
+            Iniciar um ciclo
           </CountdownButton>
         )}
       </>
