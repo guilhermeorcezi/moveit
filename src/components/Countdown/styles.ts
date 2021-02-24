@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface ButtonProps{
+  isActive?: boolean;
+}
+
 export const Container = styled.div`
 display:flex;
 align-items:center;
@@ -40,7 +44,7 @@ font-size:6.25rem;
 margin:0 0.5rem;
 `;
 
-export const CountdownButton = styled.button`
+export const CountdownButton = styled.button<ButtonProps>`
 width:100%;
 height:5rem;
 
@@ -52,8 +56,8 @@ justify-content:center;
 border:0;
 
 
-background: var(--blue);
-color: var(--white);
+background: ${props => props.isActive ? `var(--white)` : `var(--blue)`};
+color: ${props => props.isActive ? `var(--title)` : `var(--white)`};
 
 font-size:1.2rem;
 font-weight:600;
@@ -61,6 +65,7 @@ font-weight:600;
 transition: background-color 0.2s;
 
 &:hover{
-  background: var(--blue-dark);
+  background: ${props => props.isActive ? `var(--red)` : `var(--blue-dark)`};
+  color: ${props => props.isActive && `var(--white)`};
 }
-`;
+`
