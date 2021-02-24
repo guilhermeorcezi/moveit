@@ -7,6 +7,8 @@ import {
   CountdownButton,
   } from './styles';
 
+let countdownTimeout: NodeJS.Timeout;
+
 export default function Countdown(){
   const [time, setTime] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
@@ -21,9 +23,14 @@ export default function Countdown(){
     setIsActive(true);
   }, []);
 
+  const resetCountdown = useCallback(() => {
+    clearTimeout(countdownTimeout);
+    setIsActive(false);
+  },[]);
+
   useEffect(() => {
     if(isActive && time > 0){
-      setTimeout(() => {
+      countdownTimeout = setTimeout(() => {
         setTime(time - 1);
       }, 1000)
     }
@@ -57,7 +64,7 @@ export default function Countdown(){
     ) : (
       <CountdownButton
       type="button"
-      onClick={startCountdown}>
+      onClick={resetCountdown}>
         Adicionar um ciclo
       </CountdownButton>
     )}
