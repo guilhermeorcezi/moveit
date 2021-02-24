@@ -64,8 +64,14 @@ font-weight:600;
 
 transition: background-color 0.2s;
 
-&:hover{
+&:not(:disabled):hover{
   background: ${props => props.isActive ? `var(--red)` : `var(--blue-dark)`};
   color: ${props => props.isActive && `var(--white)`};
+}
+
+&:disabled{
+  background: var(--white);
+  color: var(--text);
+  cursor:not-allowed;
 }
 `
