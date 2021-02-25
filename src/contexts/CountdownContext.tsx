@@ -41,6 +41,7 @@ export function CountdownProvider({children}: CountdownProviderProps){
 
   const resetCountdown = useCallback(() => {
     clearTimeout(countdownTimeout);
+    setHasFinished(false);
     setIsActive(false);
     setTime(0.1 * 60);
   },[]);
@@ -57,8 +58,6 @@ export function CountdownProvider({children}: CountdownProviderProps){
       startNewChallenge();
     }
   }, [isActive, time])
-
-
 
   return(
     <CountdownContext.Provider
