@@ -1,14 +1,11 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../../contexts/CountdownContext';
-import SEO from '../SEO';
 import {
   Container,
   TimeGroup,
   TimeSeparator,
   CountdownButton,
   } from './styles';
-
-
 
 export default function Countdown(){
   const {
@@ -20,16 +17,12 @@ export default function Countdown(){
     startCountdown
   } = useContext(CountdownContext)
 
-
   const [minuteLeft, minuteRight] = String(minutes).padStart(2,'0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2,'0').split('');
-
-
 
   return(
     <>
     <Container>
-      <SEO title="Início | MoveIt" isIndex />
       <TimeGroup>
         <span>{minuteLeft}</span>
         <span>{minuteRight}</span>
