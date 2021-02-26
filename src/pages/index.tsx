@@ -10,9 +10,18 @@ import {Container, Section, ItemContainer} from '../styles/pages/Index'
 import { GetServerSideProps } from 'next';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
-export default function Home() {
+interface HomeProps{
+  level:number;
+  currentExperience:number;
+  challengesCompleted:number;
+}
+
+export default function Home(props: HomeProps) {
   return (
-    <ChallengesProvider>
+    <ChallengesProvider
+    level={props.level}
+    currentExperience={props.currentExperience}
+    challengesCompleted={props.challengesCompleted}>
 
       <Container>
         <SEO title="Início | MoveIt" isIndex />
@@ -43,9 +52,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   return {
     props: {
-      level,
-      currentExperience,
-      challengesCompleted
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted)
     }
   }
 }
