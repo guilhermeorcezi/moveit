@@ -42,8 +42,8 @@ The project was developed using the following technologies
 
 
 ### Web Screenshot
-<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-       <img src="./github_assets/banner.png" width="400px">
+<div style="display: flex; flex-direction: 'row'; align-items: 'center'; justify-content:'center">
+       <img src="./github_assets/banner.png" width="700px">
        
 </div>
 
