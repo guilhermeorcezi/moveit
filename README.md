@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">
+    <img alt="Proffy" width="280" title="#logo" src="./github_assets/logo.svg">
+    <br>
+</h3>
+<p align="center"> 🚀 <strong>Move It</strong> Project developed during the 4th edition of Rocketseat's NLW.
+ </p>
 
-## Getting Started
+<p align="center">
+   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/guilhermeorcezi/moveit#readme">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/guilhermeorcezi/moveit/graphs/commit-activity">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/guilhermeorcezi/moveit/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  </a>
+</p>
 
-First, run the development server:
+# :pushpin: Table of Contents
 
+- [About](#sobre)
+- [Technologies](#tecnologias-utilizadas)
+- [How to run](#como-usar)
+- [How to Contribute](#como-contribuir)
+
+<a id="sobre"></a>
+
+## :bookmark: About
+
+The <strong>Proffy</strong> is a projectbased on the pomodoro technique to take breaks for small exercises.
+
+## :rocket: Technologies
+
+The project was developed using the following technologies
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [NextJS] (https://nextjs.org/)
+- [ReactJS](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+
+
+### Web Screenshot
+<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+       <img src="./github_assets/banner.png" width="400px">
+       
+</div>
+
+
+## :fire: How to run
+
+To start the NextJS application:
 ```bash
-npm run dev
-# or
-yarn dev
+cd web
+yarn install // npm install
+yarn dev // npm dev
 ```
+After the process is over, the `localhost: 3000` page containing the developed project will automatically open in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### :recycle: How to contribute
+- First, leave a ⭐ if you like it!
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`
+- Commit your changes: `git commit -m 'feat: My new feature'`
+- Push your branch: `git push origin my-feature`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## :memo: License
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This project is under the MIT license. See the [licence page](https://opensource.org/licenses/MIT) for more details.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h4 align="center">
+    Made with 💜 by <a href="https://www.linkedin.com/in/guilherme-orcezi" target="_blank">Guilherme Orcezi</a>
+</h4>
